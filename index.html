@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <title>SRM AP Student's Corner| </title>
+</head>
+<body>
+    <header>
+      
+        
+         <div id="logo">
+            <img class="lg" src="srmaplogo.png" alt="logo">
+           <i class="fa fa-bars" aria-hidden="true"></i>
+           <a  href="#"> LAKKOJU SIDDHARDHA  </a>
+         </div>
+         <div id="side">
+            <div id="img">
+            <img src="photo.jpg" alt="Profile Image" >
+          </div>
+          <div id="wel">
+            <p>Welcome,</p>
+           <br>
+           
+           <h2>LAKKOJU SIDDHARDHA</h2>
+            </div>
+            
+            </div>
+           <div id="main">
+            <div id="nav">
+            <ul>
+               <div class="menu-item" onclick="toggleMenu(this, 'academicMenu')"> <li><i class="fa fa-book" aria-hidden="true"></i>Academics <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+               <div class="submenu" id="academicMenu">
+                  <div onclick="loadprofile('student')"> student wise Subjects</div>
+                  <div><i class="fa fa-calendar" aria-hidden="true"></i>  Time Table</div>
+                  <div><i class="fa fa-hourglass" aria-hidden="true"></i>Attendance</div>
+                  <div><i class="fa fa-ticket" aria-hidden="true"></i>OD/ML Details</div>
+                  <div><i class="fa fa-envelope" aria-hidden="true"></i>student attendance</div>
+                  <div><i class="fa fa-window-maximize" aria-hidden="true"></i>course registartion</div>
+                  <div><i class="fa fa-window-maximize" aria-hidden="true"></i>course registration cancellation</div>
+                  <div><i class="fa fa-window-maximize" aria-hidden="true"></i>minor program</div> 
+                </div>
+
+                <div class="menu-item" onclick="toggleMenu(this, 'events')"> <li><i class="fa fa-calendar" aria-hidden="true"></i>events <span> <i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="events">
+                  <div> <i class="fa fa-user" aria-hidden="true"></i>event Attendance</div>
+                </div>
+                <div class="menu-item" onclick="toggleMenu(this, 'sapMenu')"> <li><i class="fa fa-cc-visa" aria-hidden="true"></i>SAP  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="sapMenu">
+                  <div><i class="fa fa-registered" aria-hidden="true"></i>SAP Process</div>
+                  <div><i class="fa fa-times" aria-hidden="true"></i>Withdraw</div>
+                  <div><i class="fa fa-podcast" aria-hidden="true"></i>Details</div>
+                  <div><i class="fa fa-paperclip" aria-hidden="true"></i>Attachments</div>
+                  <div><i class="fa fa-comment" aria-hidden="true"></i>Feedback</div>
+                </div>
+                <div class="menu-item" onclick="toggleMenu(this, 'financeMenu')"> <li><i class="fa fa-usd" aria-hidden="true"></i>Finance  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="financeMenu">
+                  <div><i class="fa fa-inr" aria-hidden="true"></i>Fee paid Details</div>
+                  <div><i class="fa fa-usd" aria-hidden="true"></i>Fee due details</div>
+                  <div><i class="fa fa-usd" aria-hidden="true"></i>payment verification</div>
+                  <div><i class="fa fa-usd" aria-hidden="true"></i>acknowledgement</div>
+                  <div><i class="fa fa-bank" aria-hidden="true"></i>Bank account details</div>
+                </div>
+                <div class="menu-item" onclick="toggleMenu(this, 'examinationMenu')"> <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>Examination  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="examinationMenu">
+                  <div><i class="fa fa-edge" aria-hidden="true"></i>Internal Mark details</div>
+                  <div><i class="fa fa-edge" aria-hidden="true"></i> earlier internal marks</div>
+                  <div><i class="fa fa-mobile" aria-hidden="true"></i>current semester results</div>
+                  <div><i class="fa fa-mobile" aria-hidden="true"></i>Exam mark details</div>
+                  <div><i class="fa fa-mobile" aria-hidden="true"></i>exam Registration</div>
+                 <div><i class="fa fa-mobile" aria-hidden="true"></i>Degree photo upload</div>
+                </div>
+                 <div class="menu-item" onclick="toggleMenu(this, 'hostelMenu')"><li><i class="fa fa-building-o" aria-hidden="true"></i>Hostel  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="hostelMenu">
+                  <div><i class="fa fa-building-o" aria-hidden="true"></i>Hostel booking for full year</div>
+                  <div><i class="fa fa-bed" aria-hidden="true"></i>Room Details</div>
+                  <div><i class="fa fa-question-circle" aria-hidden="true"></i>Hostel Layouts and Faqs</div>
+                  <div><i class="fa fa-reply" aria-hidden="true"></i>Hostel Refund Policy</div>
+                </div>
+                 <div class="menu-item" onclick="toggleMenu(this, 'transportMenu')"><li><i class="fa fa-bus" aria-hidden="true"></i>Transport  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="transportMenu">
+                  <div><i class="fa fa-truck" aria-hidden="true"></i>Transport Registration</div>
+                  <div><i class="fa fa-check-circle" aria-hidden="true"></i>Registration acknowledgement</div>
+                  <div><i class="fa fa-question-circle" aria-hidden="true"></i>Transport and FAQs</div>
+                  <div><i class="fa fa-reply" aria-hidden="true"></i>Transport Refund Policy</div>
+                </div>
+                 <div class="menu-item" onclick="toggleMenu(this, 'feedbackMenu')"><li><i class="fa fa-wpforms" aria-hidden="true"></i>Feedback  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="feedbackMenu">
+                  <div>End semester Feedback</div>
+                  
+                </div>
+               
+                <div class="menu-item" onclick="toggleMenu(this, 'announcementsMenu')"><li><i class="fa fa-wpforms" aria-hidden="true"></i>Announcements  <span></span></li></div>
+                <div class="submenu" id="announcementsMenu">
+                  
+                </div>
+                <div class="menu-item" onclick="toggleMenu(this, 'verificationMenu')"><li><i class="fa fa-usd" aria-hidden="true"></i>verification  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
+                <div class="submenu" id="verificationMenu">
+                  <div><i class="fa fa-usd" aria-hidden="true"></i>Mobile Number Verification</div>
+                  
+                </div>
+            </ul>
+            
+            <div class="bottom">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <i class="fa fa-cog" aria-hidden="true"></i>
+              <i class="fa fa-power-off" aria-hidden="true"></i>
+            </div>
+           </div>
+           
+           
+      <div class="profile" id="profile" >
+        <div id="prf"><h2>PROFILE</h2></div>
+        <table>
+       <tr> <td width="40%">Student name</td>        <td width="5%">  :   </td>       <td><b>LAKKOJU SIDDHARDHA</b></td></tr>
+       <tr id="s1"><td width="40%">Register No.</td>        <td width="5%">  :   </td>           <td><b>AP25110010998</b></td></tr>
+        <tr ><td width="40%">Institution</td>              <td width="5%">  :   </td>           <td><b>school of engineering and sciences (college)</b></td></tr>
+         <tr id="s1"><td width="40%">Semester</td>              <td width="5%">  :   </td>           <td><b>II semester</b></td></tr>
+        <tr><td width="40%">Program/Section</td>             <td width="5%">  :   </td>           <td><b>B.Tech.-Computer Science and Engineering[UG - FULL TIME] / 'O'</b></td></tr>
+        <tr id="s1"><td width="40%">Specialization</td>          <td width="5%">  :   </td>           <td><b></b></td></tr>
+        <tr><td width="40%">D.O.B / Gender  </td>               <td width="5%">  :   </td>           <td>28-Oct-2006 /Male</td></tr>
+         <tr id="s1"><td width="40%">Student Contact No. / Email   </td>                     <td width="5%">   : </td>        <td>  9505550091<span class="ver"><b> (verified)</b></span> / lakkoju.siddhardha@srmap.edu.in</td></tr>
+        <tr><td width="40%">Father Name / Mother Name </td>               <td width="5%">  :   </td>           <td>LAKKOJU SANTHOSH KUMAR / LAKKOJU LATHA</td></tr>
+         <tr id="s1"><td width="40%">Access Through</td>     <td width="5%">  :   </td>           <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36</td></tr>
+      </table>  
+    </div>
+   </div>
+   
+</header>
+
+    <footer>
+            <p> &copy;2026 SRMAP University. All rights reserved. </p>
+           
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

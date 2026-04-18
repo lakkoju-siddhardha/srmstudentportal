@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("portal.jpg");
+    background-size: cover;
+    font-family:" Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+img{
+    padding-left: 15px;
+    margin-bottom: 22px;
+}
+.container{
+    display: flex;
+    width: 1300px;
+}
+.welcome{
+    margin-left: 25px;
+   width: 1360px;
+   height: 410px;
+   background-color: rgba(255, 255, 255, 0.85);
+  padding-top: 20px;
+  margin-right: 25px;
+  border-radius: 4px;
+}
+
+.welcome h2{
+    color: #38708b;
+    font-weight: 200;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.welcome h3{
+    color: #0606e6;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-weight: 200;
+    font-size: 20px;
+}
+.welcome p,ul{
+    font-size: 14px;
+}
+.welcome p{
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+ .terms{
+margin-left: 150px;
+color: #0606e6;
+}
+.welcome ul{
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+.welcome ul li{
+    padding-bottom: 6px;
+}
+.welcome a{
+    text-decoration: none;
+}
+.portal{
+    background-color: rgba(255, 255, 255, 0.85);
+    
+    border-radius: 5px;
+    width: 950px;
+    height: 460px;
+}
+.por{
+    height: 25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:#56532d ;
+    color: #fff;
+    padding-top: 12px;
+    padding-left: 18px;
+    margin-bottom: 30px;
+    opacity: 0.85;
+}
+
+.portal ul li{
+    list-style: none;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+input{
+    padding: 10px;
+    width: 94%;
+    padding-left: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid gray;
+   border-radius: 5px;
+   outline: none;
+}
+button {
+  padding: 10px 220px;
+  font-size: medium;
+  background-color: rgba(100, 179, 94, 0.85);
+  color: white;
+   border-color: transparent;
+   border-radius: 5px;
+}
+.forgot{
+    padding-top: 10px;
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    color: #0606e6;
+}
+.forgot a{
+    color: #0606e6;
+    text-decoration: none;
+}
+.captcha
+{
+    color: #56532d;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.portal .if {
+    padding-left: 2px;
+    color: #0909e8;
+    font-size: 14px;
+    text-align: center;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    bottom: 0;
+}
+.login:hover{
+    background-color: rgba(82, 160, 74, 0.85);
+}

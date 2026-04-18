@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .sidebar {
+    width: 250px;
+    background: #2f4050;
+    color: white;
+    padding: 10px;
+}
+
+.menu-item {
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #3a4b5c;
+}
+
+.submenu div {
+    padding: 10px 20px;
+}
+
+ 
+    
+    </style>
+</head>
+<body>
+  <div class="sidebar">
+
+    <!-- Academic -->
+    <div class="menu-item" onclick="toggleMenu(this, 'academicMenu')">
+        Academic ▼
+    </div>
+    <div class="submenu" id="academicMenu">
+        <div>Subjects</div>
+        <div>Time Table</div>
+        <div>Attendance</div>
+    </div>
+
+    <!-- Finance -->
+    <div class="menu-item" onclick="toggleMenu(this, 'financeMenu')">
+        Finance ▼
+    </div>
+    <div class="submenu" id="financeMenu">
+        <div>Fee Details</div>
+        <div>Payments</div>
+    </div>
+
+    <!-- Examination -->
+    <div class="menu-item" onclick="toggleMenu(this, 'examMenu')">
+        Examination ▼
+    </div>
+    <div class="submenu" id="examMenu">
+        <div>Results</div>
+        <div>Hall Ticket</div>
+    </div>
+
+</div>
+        
+
+</div>
+<script>
+function toggleMenu(clickedItem, id) {
+    const allMenus = document.querySelectorAll('.submenu');
+
+    // Close all other menus
+    allMenus.forEach(menu => {
+        if (menu.id !== id) {
+            menu.style.maxHeight = null;
+        }
+    });
+
+    const currentMenu = document.getElementById(id);
+
+    // Toggle current menu
+    if (currentMenu.style.maxHeight) {
+        currentMenu.style.maxHeight = null;
+    } else {
+        currentMenu.style.maxHeight = currentMenu.scrollHeight + "px";
+
+        // 🔥 IMPORTANT: ensure it opens from clicked position
+        clickedItem.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}
+
+</script>
+</body>
+</html>
