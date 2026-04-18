@@ -5,21 +5,21 @@ function toggleMenu(clickedItem, id) {
 
     const currentMenu = document.getElementById(id);
 
-    // 🔥 If already open → close it
+    //  If already open → close it
     if (currentMenu.style.maxHeight) {
         currentMenu.style.maxHeight = null;
         clickedItem.classList.remove("active");
         return;
     }
 
-    // 🔥 Close all menus + remove active
+    //  Close all menus + remove active
     allMenus.forEach(menu => menu.style.maxHeight = null);
     allItems.forEach(item => item.classList.remove("active"));
 
-    // 🔥 Open clicked menu
+    //  Open clicked menu
     currentMenu.style.maxHeight = currentMenu.scrollHeight + "px";
 
-    // 🔥 Highlight active
+    //  Highlight active
     clickedItem.classList.add("active");
 }
 function loadprofile(section) {
