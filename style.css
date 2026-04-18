@@ -33,7 +33,7 @@ body{
     background-color: #2A3F54;
     width: 220px;
     color: #fff;
-    padding-bottom: 20px;
+    
     
 }
 
@@ -59,7 +59,7 @@ body{
 }
 #side img{
     width:70px;
-    height:90px;
+    height:80px;
     border-radius: 50%;
     border: 5px solid #fff;
 }
