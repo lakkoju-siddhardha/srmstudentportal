@@ -246,3 +246,64 @@ h1{
         `;
     }
 }
+
+// ==========================================
+// MOBILE SIDEBAR TOGGLE
+// ==========================================
+
+const menuToggle = document.getElementById("menuToggle");
+
+let sidebarState = 0;
+
+if (menuToggle) {
+
+    menuToggle.addEventListener("click", function () {
+
+        const nav = document.getElementById("nav");
+        const side = document.getElementById("side");
+
+        // ==================================
+        // STATE 1: FULL SIDEBAR → ICONS ONLY
+        // ==================================
+
+        if (sidebarState === 0) {
+
+            nav.classList.add("collapsed");
+            nav.classList.remove("hidden");
+
+            side.classList.add("collapsed");
+
+            sidebarState = 1;
+        }
+
+        // ==================================
+        // STATE 2: ICONS → COMPLETELY HIDDEN
+        // ==================================
+
+        else if (sidebarState === 1) {
+
+            nav.classList.remove("collapsed");
+            nav.classList.add("hidden");
+
+            side.classList.add("collapsed");
+
+            sidebarState = 2;
+        }
+
+        // ==================================
+        // STATE 3: HIDDEN → FULL SIDEBAR
+        // ==================================
+
+        else {
+
+            nav.classList.remove("hidden");
+            nav.classList.remove("collapsed");
+
+            side.classList.remove("collapsed");
+
+            sidebarState = 0;
+        }
+
+    });
+
+}
