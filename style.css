@@ -4,7 +4,10 @@
     
 }
 body{
-    font-family:" Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f7f7f7;
+    width: 100%;
+    overflow-x: hidden;
 }
  #logo{
     background-color: #2A3F54;
@@ -680,16 +683,16 @@ footer p{
        PROFILE TABLE
        ============================================== */
 
-    table {
-        width: 100%;
-        max-width: 100%;
-        border-spacing: 0;
-        border: #777 solid 1px;
-        border-radius: 5px;
-        table-layout: fixed;
-        font-size: 12px;
-    }
-
+   table{
+    border-spacing: 2px;
+    width: 100%;
+    max-width: 100%;
+    border: #000 solid 1px;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-top: 15px;
+    table-layout: fixed;
+}
     table tbody tr td {
         padding: 9px 8px;
         line-height: 1.4;
@@ -818,14 +821,19 @@ footer p{
 
 @media (max-width: 768px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
     html,
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
         margin: 0;
         padding: 0;
+        overflow-x: hidden !important;
     }
+
 
     /* ================= HEADER ================= */
 
@@ -833,8 +841,10 @@ footer p{
         position: fixed;
         top: 0;
         left: 0;
+
         width: 100%;
         height: 68px;
+
         z-index: 2000;
 
         display: flex;
@@ -860,16 +870,19 @@ footer p{
     #logo a {
         margin-left: auto;
         padding: 0 10px;
+
         font-size: 11px;
         color: white;
+
         white-space: nowrap;
     }
 
 
-    /* ================= PROFILE HEADER ================= */
+    /* ================= PROFILE SIDE ================= */
 
     #side {
         position: fixed;
+
         top: 68px;
         left: 0;
 
@@ -879,6 +892,7 @@ footer p{
         z-index: 1500;
 
         background: #2A3F54;
+
         overflow: hidden;
     }
 
@@ -889,141 +903,7 @@ footer p{
         display: block;
 
         width: 100%;
-        min-width: 0;
-
-        margin-top: 188px;
-    }
-
-
-    /* ================= NAVIGATION ================= */
-
-    #nav {
-        position: fixed;
-
-        top: 188px;
-        left: 0;
-
-        width: 220px;
-        height: calc(100vh - 188px);
-
-        z-index: 1400;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        background: #2A3F54;
-
-        transition: width 0.25s ease;
-    }
-
-    #nav ul {
-        width: 220px;
-        min-height: auto;
-    }
-
-
-    /* ================= CONTENT ================= */
-
-    .profile {
-        width: auto !important;
-        min-width: 0;
-
-        margin-left: 220px;
-
-        padding: 15px;
-
-        box-sizing: border-box;
-
-        overflow-x: auto;
-
-        transition: margin-left 0.25s ease;
-    }
-
-
-    /* =================================================
-       STATE 1
-       FULL SIDEBAR
-       ================================================= */
-
-    @media (max-width: 768px) {
-
-    html,
-    body {
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* ================= HEADER ================= */
-
-    #logo {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 68px;
-
-        z-index: 2000;
-
-        display: flex;
-        align-items: center;
-
-        background: #2A3F54;
-    }
-
-    #logo img {
-        width: 95px;
-        height: auto;
-        margin-left: 5px;
-    }
-
-    #menuToggle {
-        display: block;
-
-        color: white;
-        font-size: 28px;
-
-        margin-left: 15px;
-
-        cursor: pointer;
-    }
-
-    #logo a {
-        margin-left: auto;
-        padding: 0 10px;
-
-        font-size: 11px;
-        color: white;
-
-        white-space: nowrap;
-    }
-
-
-    /* ================= PROFILE HEADER ================= */
-
-    #side {
-        position: fixed;
-
-        top: 68px;
-        left: 0;
-
-        width: 220px;
-        height: 120px;
-
-        z-index: 1500;
-
-        background: #2A3F54;
-    }
-
-
-    /* ================= MAIN ================= */
-
-    #main {
-        display: block;
-
-        width: 100%;
+        max-width: 100%;
         min-width: 0;
 
         margin-top: 188px;
@@ -1043,10 +923,10 @@ footer p{
 
         z-index: 1400;
 
+        background: #2A3F54;
+
         overflow-y: auto;
         overflow-x: hidden;
-
-        background: #2A3F54;
     }
 
     #nav ul {
@@ -1055,11 +935,48 @@ footer p{
     }
 
 
+    /* Sidebar menu */
+
+    #nav .menu-item li {
+        font-size: 14px;
+
+        padding: 14px 12px;
+
+        text-align: left;
+
+        white-space: normal;
+    }
+
+    #nav .menu-item li > i {
+        font-size: 20px;
+
+        margin-right: 10px;
+    }
+
+
+    /* Hostel submenu */
+
+    #nav .submenu {
+        width: 220px;
+
+        overflow: hidden;
+    }
+
+    #nav .submenu div {
+        font-size: 13px;
+
+        padding: 10px 15px;
+
+        white-space: normal;
+    }
+
+
     /* ================= CONTENT ================= */
 
     .profile {
-        width: auto !important;
-        min-width: 0;
+        width: calc(100% - 220px) !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
 
         margin-left: 220px;
 
@@ -1067,13 +984,213 @@ footer p{
 
         box-sizing: border-box;
 
-        overflow-x: auto;
+        overflow-x: hidden !important;
     }
 
 
-    /* ==========================================
+    /* =================================================
+       STUDENT PROFILE TABLE
+       ================================================= */
+
+    .profile table {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        table-layout: fixed !important;
+
+        border-spacing: 0;
+    }
+
+    .profile table td,
+    .profile table th {
+        padding: 8px 7px !important;
+
+        font-size: 13px !important;
+
+        white-space: normal !important;
+
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+
+        vertical-align: top;
+    }
+
+
+    /* Profile table columns */
+
+    .profile table td:nth-child(1),
+    .profile table th:nth-child(1) {
+        width: 38% !important;
+    }
+
+    .profile table td:nth-child(2),
+    .profile table th:nth-child(2) {
+        width: 5% !important;
+
+        text-align: center;
+    }
+
+    .profile table td:nth-child(3),
+    .profile table th:nth-child(3) {
+        width: 57% !important;
+    }
+
+
+    /* Profile heading */
+
+    .profile h1 {
+        margin-left: 0 !important;
+
+        font-size: 20px !important;
+
+        line-height: 1.4;
+    }
+
+
+    /* =================================================
+       HOSTEL ROOM DETAILS
+       ================================================= */
+
+    .hostel-page {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 10px 12px !important;
+
+        box-sizing: border-box;
+    }
+
+
+    .hostel-page h1 {
+        width: 100%;
+
+        margin: 10px 0 15px 0;
+
+        font-size: 28px;
+
+        line-height: 1.35;
+
+        font-weight: 400;
+    }
+
+
+    .room-details {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* Room / Type / Allotted Room rows */
+
+    .detail-row {
+        display: flex;
+
+        width: 100% !important;
+
+        margin: 0;
+
+        padding: 10px 0;
+
+        border-bottom: 1px solid #ddd;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-label {
+        width: 42% !important;
+        min-width: 42% !important;
+
+        padding-right: 8px;
+
+        font-size: 22px !important;
+
+        line-height: 1.45;
+
+        word-break: normal;
+    }
+
+
+    .detail-value {
+        width: 58% !important;
+        min-width: 0 !important;
+
+        flex: 1;
+
+        font-size: 22px !important;
+
+        line-height: 1.45;
+
+        word-break: break-word;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Print button */
+
+    .print-btn {
+        margin: 15px 0 5px 0 !important;
+
+        font-size: 14px;
+    }
+
+
+    /* Previous Year Hostel Status */
+
+    .previous-title {
+        width: 100%;
+
+        margin-top: 12px;
+
+        font-size: 15px;
+
+        line-height: 1.4;
+    }
+
+
+    /* Hostel previous-year table */
+
+    .hostel-table {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        border-collapse: collapse;
+
+        table-layout: fixed !important;
+    }
+
+    .hostel-table th,
+    .hostel-table td {
+        width: auto;
+
+        padding: 7px 4px;
+
+        font-size: 11px !important;
+
+        line-height: 1.3;
+
+        white-space: normal !important;
+
+        word-break: break-word;
+
+        overflow-wrap: anywhere;
+
+        vertical-align: top;
+    }
+
+
+    /* =================================================
        SIDEBAR HIDDEN
-       ========================================== */
+       ================================================= */
 
     body.sidebar-hidden #side {
         display: none;
@@ -1085,213 +1202,28 @@ footer p{
 
     body.sidebar-hidden #main {
         margin-top: 68px;
+
+        width: 100%;
     }
 
     body.sidebar-hidden .profile {
-        margin-left: 0;
-
         width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
 
         padding: 15px 12px;
     }
 
 
-    /* ==========================================
-       ROOM DETAILS
-       ========================================== */
-
-    .hostel-page {
-        width: 100%;
-        max-width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 10px 12px;
-    }
-
-    .hostel-page h1 {
-        margin: 10px 0;
-
-        font-size: 29px;
-        line-height: 1.35;
-
-        font-weight: 400;
-    }
-
-    .room-details {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .detail-row {
-        display: flex;
-
-        width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 10px 0;
-
-        border-bottom: 1px solid #ddd;
-    }
-
-    .detail-label {
-        width: 150px;
-        min-width: 150px;
-
-        font-size: 28px;
-        line-height: 1.45;
-    }
-
-    .detail-value {
-        flex: 1;
-
-        font-size: 28px;
-        line-height: 1.45;
-    }
-
-    .print-btn {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-    .previous-title {
-        font-size: 15px;
-        margin-top: 12px;
-    }
-
-    .hostel-table {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-left: 0 !important;
-
-        border-collapse: collapse;
-
-        table-layout: fixed;
-    }
-
-    .hostel-table th,
-    .hostel-table td {
-        padding: 7px 5px;
-
-        font-size: 13px;
-
-        vertical-align: top;
-    }
-
-}
     /* =================================================
-       STATE 3
-       SIDEBAR COMPLETELY HIDDEN
+       PREVENT ANY CONTENT FROM CREATING SCROLL
        ================================================= */
 
-    body.sidebar-hidden #side {
-        display: none;
-    }
-
-    body.sidebar-hidden #nav {
-        display: none;
-    }
-
-    body.sidebar-hidden .profile {
-        margin-left: 0;
-
-        width: 100% !important;
-    }
-
-
-    /* =================================================
-       ROOM DETAILS
-       ================================================= */
-
-    .hostel-page {
-        width: 100%;
-        max-width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 10px 12px;
-    }
-
-    .hostel-page h1 {
-        margin: 10px 0;
-
-        font-size: 29px;
-        line-height: 1.35;
-
-        font-weight: 400;
-    }
-
-    .room-details {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .detail-row {
-        display: flex;
-
-        width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 10px 0;
-
-        border-bottom: 1px solid #ddd;
-    }
-
-    .detail-label {
-        width: 150px;
-        min-width: 150px;
-
-        font-size: 28px;
-        line-height: 1.45;
-    }
-
-    .detail-value {
-        flex: 1;
-
-        font-size: 28px;
-        line-height: 1.45;
-    }
-
-    .print-btn {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-    .previous-title {
-        font-size: 15px;
-        margin-top: 12px;
-    }
-
-    .hostel-table {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-left: 0 !important;
-
-        border-collapse: collapse;
-
-        table-layout: fixed;
-    }
-
-    .hostel-table th,
-    .hostel-table td {
-        padding: 7px 5px;
-
-        font-size: 13px;
-
-        word-break: normal;
-        vertical-align: top;
-    }
-
-
-    /* =================================================
-       STUDENT / OTHER TABLES
-       ================================================= */
-
-    .profile table {
+    .profile img,
+    .profile iframe,
+    .profile div,
+    .profile section {
         max-width: 100%;
     }
 
