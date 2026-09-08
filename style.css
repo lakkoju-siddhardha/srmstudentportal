@@ -1242,3 +1242,117 @@ footer p{
     }
 
 }
+/* =====================================================
+   FINAL MOBILE FIXES
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    /* Hide SRM logo on mobile */
+    #logo img {
+        display: none !important;
+    }
+
+    /* Keep hamburger's original color */
+    #menuToggle {
+        color: inherit !important;
+    }
+
+    /* =================================================
+       PREVIOUS YEAR HOSTEL TABLE
+       ================================================= */
+
+    .hostel-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+
+        overflow: hidden !important;
+    }
+
+    .hostel-table th,
+    .hostel-table td {
+        padding: 6px 3px !important;
+
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+        overflow-wrap: anywhere !important;
+
+        vertical-align: top !important;
+    }
+
+    /* Six columns */
+    .hostel-table th:nth-child(1),
+    .hostel-table td:nth-child(1) {
+        width: 16% !important;
+    }
+
+    .hostel-table th:nth-child(2),
+    .hostel-table td:nth-child(2) {
+        width: 17% !important;
+    }
+
+    .hostel-table th:nth-child(3),
+    .hostel-table td:nth-child(3) {
+        width: 14% !important;
+    }
+
+    .hostel-table th:nth-child(4),
+    .hostel-table td:nth-child(4) {
+        width: 14% !important;
+    }
+
+    .hostel-table th:nth-child(5),
+    .hostel-table td:nth-child(5) {
+        width: 14% !important;
+    }
+
+    .hostel-table th:nth-child(6),
+    .hostel-table td:nth-child(6) {
+        width: 25% !important;
+    }
+
+
+    /* =================================================
+       PREVIOUS YEAR TITLE
+       ================================================= */
+
+    .previous-title {
+        font-size: 14px !important;
+
+        padding: 8px 0 !important;
+
+        margin: 5px 0 0 0 !important;
+    }
+
+
+    /* =================================================
+       REMOVE HORIZONTAL SCROLLBAR
+       ================================================= */
+
+    .profile {
+        overflow-x: hidden !important;
+    }
+
+    .hostel-page {
+        overflow-x: hidden !important;
+    }
+
+}

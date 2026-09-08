@@ -344,11 +344,7 @@ h1{
 const menuToggle = document.getElementById("menuToggle");
 
 if (menuToggle) {
-
     menuToggle.addEventListener("click", function () {
-
         document.body.classList.toggle("sidebar-hidden");
-
     });
-
 }
