@@ -945,70 +945,242 @@ footer p{
        FULL SIDEBAR
        ================================================= */
 
-    body.sidebar-expanded #nav {
-        width: 220px;
-    }
+    @media (max-width: 768px) {
 
-    body.sidebar-expanded #side {
-        display: block;
-    }
-
-    body.sidebar-expanded .profile {
-        margin-left: 220px;
-    }
-
-
-    /* =================================================
-       STATE 2
-       ICONS ONLY
-       ================================================= */
-
-    body.sidebar-collapsed #side {
-        display: none;
-    }
-
-    body.sidebar-collapsed #nav {
-        top: 68px;
-
-        width: 82px;
-        height: calc(100vh - 68px);
-    }
-
-    body.sidebar-collapsed #nav ul {
-        width: 82px;
-    }
-
-    body.sidebar-collapsed #nav li {
-        width: 82px;
-
-        padding: 14px 0;
-
-        text-align: center;
-
-        font-size: 0;
-    }
-
-    body.sidebar-collapsed #nav li > i {
-        font-size: 22px;
-
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
         margin: 0;
-
-        display: block;
+        padding: 0;
     }
 
-    body.sidebar-collapsed #nav li span {
+    /* ================= HEADER ================= */
+
+    #logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 68px;
+
+        z-index: 2000;
+
+        display: flex;
+        align-items: center;
+
+        background: #2A3F54;
+    }
+
+    #logo img {
+        width: 95px;
+        height: auto;
+        margin-left: 5px;
+    }
+
+    #menuToggle {
+        display: block;
+
+        color: white;
+        font-size: 28px;
+
+        margin-left: 15px;
+
+        cursor: pointer;
+    }
+
+    #logo a {
+        margin-left: auto;
+        padding: 0 10px;
+
+        font-size: 11px;
+        color: white;
+
+        white-space: nowrap;
+    }
+
+
+    /* ================= PROFILE HEADER ================= */
+
+    #side {
+        position: fixed;
+
+        top: 68px;
+        left: 0;
+
+        width: 220px;
+        height: 120px;
+
+        z-index: 1500;
+
+        background: #2A3F54;
+    }
+
+
+    /* ================= MAIN ================= */
+
+    #main {
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        margin-top: 188px;
+    }
+
+
+    /* ================= SIDEBAR ================= */
+
+    #nav {
+        position: fixed;
+
+        top: 188px;
+        left: 0;
+
+        width: 220px;
+        height: calc(100vh - 188px);
+
+        z-index: 1400;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        background: #2A3F54;
+    }
+
+    #nav ul {
+        width: 220px;
+        min-height: auto;
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    .profile {
+        width: auto !important;
+        min-width: 0;
+
+        margin-left: 220px;
+
+        padding: 15px;
+
+        box-sizing: border-box;
+
+        overflow-x: auto;
+    }
+
+
+    /* ==========================================
+       SIDEBAR HIDDEN
+       ========================================== */
+
+    body.sidebar-hidden #side {
         display: none;
     }
 
-    body.sidebar-collapsed .submenu {
-        display: none !important;
+    body.sidebar-hidden #nav {
+        display: none;
     }
 
-    body.sidebar-collapsed .profile {
-        margin-left: 82px;
+    body.sidebar-hidden #main {
+        margin-top: 68px;
+    }
+
+    body.sidebar-hidden .profile {
+        margin-left: 0;
+
+        width: 100% !important;
+
+        padding: 15px 12px;
     }
 
 
+    /* ==========================================
+       ROOM DETAILS
+       ========================================== */
+
+    .hostel-page {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 10px 12px;
+    }
+
+    .hostel-page h1 {
+        margin: 10px 0;
+
+        font-size: 29px;
+        line-height: 1.35;
+
+        font-weight: 400;
+    }
+
+    .room-details {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .detail-row {
+        display: flex;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 10px 0;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    .detail-label {
+        width: 150px;
+        min-width: 150px;
+
+        font-size: 28px;
+        line-height: 1.45;
+    }
+
+    .detail-value {
+        flex: 1;
+
+        font-size: 28px;
+        line-height: 1.45;
+    }
+
+    .print-btn {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .previous-title {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    .hostel-table {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+
+        border-collapse: collapse;
+
+        table-layout: fixed;
+    }
+
+    .hostel-table th,
+    .hostel-table td {
+        padding: 7px 5px;
+
+        font-size: 13px;
+
+        vertical-align: top;
+    }
+
+}
     /* =================================================
        STATE 3
        SIDEBAR COMPLETELY HIDDEN

@@ -343,69 +343,12 @@ h1{
 
 const menuToggle = document.getElementById("menuToggle");
 
-let sidebarState = 0;
-
-// 0 = Full sidebar
-// 1 = Icons only
-// 2 = Hidden
-
 if (menuToggle) {
-
-    // Start with full sidebar
-    document.body.classList.add("sidebar-expanded");
 
     menuToggle.addEventListener("click", function () {
 
-        // STATE 0 → STATE 1
-        // FULL → ICONS ONLY
-
-        if (sidebarState === 0) {
-
-            document.body.classList.remove(
-                "sidebar-expanded",
-                "sidebar-hidden"
-            );
-
-            document.body.classList.add(
-                "sidebar-collapsed"
-            );
-
-            sidebarState = 1;
-        }
-
-        // STATE 1 → STATE 2
-        // ICONS ONLY → HIDDEN
-
-        else if (sidebarState === 1) {
-
-            document.body.classList.remove(
-                "sidebar-collapsed",
-                "sidebar-expanded"
-            );
-
-            document.body.classList.add(
-                "sidebar-hidden"
-            );
-
-            sidebarState = 2;
-        }
-
-        // STATE 2 → STATE 0
-        // HIDDEN → FULL
-
-        else {
-
-            document.body.classList.remove(
-                "sidebar-hidden",
-                "sidebar-collapsed"
-            );
-
-            document.body.classList.add(
-                "sidebar-expanded"
-            );
-
-            sidebarState = 0;
-        }
+        document.body.classList.toggle("sidebar-hidden");
 
     });
+
 }
