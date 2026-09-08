@@ -1261,9 +1261,15 @@ footer p{
     }
 
     /* Keep hamburger's original color */
+    @media (max-width: 768px) {
+
     #menuToggle {
-        color: inherit !important;
+        color: #2aa9d6 !important;
+        font-size: 28px;
+        cursor: pointer;
     }
+
+}
 
     /* =================================================
        PREVIOUS YEAR HOSTEL TABLE
@@ -1353,6 +1359,19 @@ footer p{
 
     .hostel-page {
         overflow-x: hidden !important;
+    }
+
+}
+@media (max-width: 768px) {
+
+    /* Previous year hostel details - green text */
+    .hostel-table td {
+        color: #086b43 !important;
+    }
+
+    /* Keep table headings green too */
+    .hostel-table th {
+        color: #086b43 !important;
     }
 
 }
