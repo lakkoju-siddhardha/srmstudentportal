@@ -25,6 +25,95 @@ function toggleMenu(clickedItem, id) {
 function loadprofile(section) {
     const profileDiv = document.getElementById("profile");
 
+     if (section === 'roomdetails') {
+
+        document.getElementById('profile').innerHTML = `
+            
+            <div class="hostel-page">
+
+                <h1>
+                    Hostel registration<br>
+                    completed
+                </h1>
+
+                <hr>
+
+                <div class="room-details">
+
+                    <div class="detail-row">
+                        <div class="detail-label">
+                            Room<br>
+                            Type
+                        </div>
+
+                        <div class="detail-value">
+                            4 Bunker<br>
+                            Sharing A/C
+                        </div>
+                    </div>
+
+
+                    <div class="detail-row">
+                        <div class="detail-label">
+                            Allotted<br>
+                            Room No.
+                        </div>
+
+                        <div class="detail-value">
+                            GANGA B /<br>
+                            Level 3 / GB-<br>
+                            350 / Bed - 1
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <button class="print-btn" onclick="window.print()">
+                    Print
+                </button>
+
+
+                <hr>
+
+
+                <h3 class="previous-title">
+                    Previous Year Hostel Status
+                </h3>
+
+
+                <table class="hostel-table">
+
+                    <thead>
+                        <tr>
+                            <th>Academic<br>Year</th>
+                            <th>Alloted<br>Date</th>
+                            <th>Block</th>
+                            <th>Tower</th>
+                            <th>Room<br>Name</th>
+                            <th>Room<br>Type</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>2025-<br>2026</td>
+                            <td>01-<br>Sep-<br>2025</td>
+                            <td>GANGA</td>
+                            <td>Level<br>15</td>
+                            <td>1504</td>
+                            <td>3 Sharing<br>A/C</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        `;
+
+        return;
+    }
+
     if (section === "student") {
         profileDiv.innerHTML = `
             <!DOCTYPE html>
@@ -245,6 +334,7 @@ h1{
 </html>
         `;
     }
+
 }
 
 // ==========================================
@@ -255,55 +345,67 @@ const menuToggle = document.getElementById("menuToggle");
 
 let sidebarState = 0;
 
+// 0 = Full sidebar
+// 1 = Icons only
+// 2 = Hidden
+
 if (menuToggle) {
+
+    // Start with full sidebar
+    document.body.classList.add("sidebar-expanded");
 
     menuToggle.addEventListener("click", function () {
 
-        const nav = document.getElementById("nav");
-        const side = document.getElementById("side");
-
-        // ==================================
-        // STATE 1: FULL SIDEBAR → ICONS ONLY
-        // ==================================
+        // STATE 0 → STATE 1
+        // FULL → ICONS ONLY
 
         if (sidebarState === 0) {
 
-            nav.classList.add("collapsed");
-            nav.classList.remove("hidden");
+            document.body.classList.remove(
+                "sidebar-expanded",
+                "sidebar-hidden"
+            );
 
-            side.classList.add("collapsed");
+            document.body.classList.add(
+                "sidebar-collapsed"
+            );
 
             sidebarState = 1;
         }
 
-        // ==================================
-        // STATE 2: ICONS → COMPLETELY HIDDEN
-        // ==================================
+        // STATE 1 → STATE 2
+        // ICONS ONLY → HIDDEN
 
         else if (sidebarState === 1) {
 
-            nav.classList.remove("collapsed");
-            nav.classList.add("hidden");
+            document.body.classList.remove(
+                "sidebar-collapsed",
+                "sidebar-expanded"
+            );
 
-            side.classList.add("collapsed");
+            document.body.classList.add(
+                "sidebar-hidden"
+            );
 
             sidebarState = 2;
         }
 
-        // ==================================
-        // STATE 3: HIDDEN → FULL SIDEBAR
-        // ==================================
+        // STATE 2 → STATE 0
+        // HIDDEN → FULL
 
         else {
 
-            nav.classList.remove("hidden");
-            nav.classList.remove("collapsed");
+            document.body.classList.remove(
+                "sidebar-hidden",
+                "sidebar-collapsed"
+            );
 
-            side.classList.remove("collapsed");
+            document.body.classList.add(
+                "sidebar-expanded"
+            );
 
             sidebarState = 0;
         }
 
     });
-
 }

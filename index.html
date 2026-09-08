@@ -14,7 +14,7 @@
         
          <div id="logo">
             <img class="lg" src="srmaplogo.png" alt="logo">
-           <i class="fa fa-bars" id="menuToggle" aria-hidden="true"></i>
+          <i class="fa fa-bars" id="menuToggle" aria-hidden="true"></i>
            <a  href="#"> LAKKOJU SIDDHARDHA  </a>
          </div>
          <div id="side">
@@ -74,12 +74,40 @@
                  <div><i class="fa fa-mobile" aria-hidden="true"></i>Degree photo upload</div>
                 </div>
                  <div class="menu-item" onclick="toggleMenu(this, 'hostelMenu')"><li><i class="fa fa-building-o" aria-hidden="true"></i>Hostel  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
-                <div class="submenu" id="hostelMenu">
-                  <div><i class="fa fa-building-o" aria-hidden="true"></i>Hostel booking for full year</div>
-                  <div><i class="fa fa-bed" aria-hidden="true"></i>Room Details</div>
-                  <div><i class="fa fa-question-circle" aria-hidden="true"></i>Hostel Layouts and Faqs</div>
-                  <div><i class="fa fa-reply" aria-hidden="true"></i>Hostel Refund Policy</div>
-                </div>
+                <div class="menu-item" onclick="toggleMenu(this, 'hostelMenu')">
+    <li>
+        <i class="fa fa-building-o" aria-hidden="true"></i>
+        Hostel
+        <span>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </span>
+    </li>
+</div>
+
+<div class="submenu" id="hostelMenu">
+
+    <div>
+        <i class="fa fa-building-o" aria-hidden="true"></i>
+        Hostel booking for full year
+    </div>
+
+    <!-- ONLY THIS ONE changes the main content -->
+    <div onclick="loadprofile('roomdetails')">
+        <i class="fa fa-bed" aria-hidden="true"></i>
+        Room Details
+    </div>
+
+    <div>
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+        Hostel Layouts and Faqs
+    </div>
+
+    <div>
+        <i class="fa fa-reply" aria-hidden="true"></i>
+        Hostel Refund Policy
+    </div>
+
+</div>
                  <div class="menu-item" onclick="toggleMenu(this, 'transportMenu')"><li><i class="fa fa-bus" aria-hidden="true"></i>Transport  <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></li></div>
                 <div class="submenu" id="transportMenu">
                   <div><i class="fa fa-truck" aria-hidden="true"></i>Transport Registration</div>
