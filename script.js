@@ -48,7 +48,8 @@ function loadprofile(section) {
 
                         <div class="detail-value">
                             4 Bunker<br>
-                            Sharing A/C
+                            Sharing non <br> 
+                            A/C
                         </div>
                     </div>
 
@@ -60,9 +61,9 @@ function loadprofile(section) {
                         </div>
 
                         <div class="detail-value">
-                            GANGA B /<br>
-                            Level 3 / GB-<br>
-                            350 / Bed - 1
+                            VEDAVATHI/<br>
+                            Level 7 / VE-<br>
+                            746 / Bed - 4
                         </div>
                     </div>
 
